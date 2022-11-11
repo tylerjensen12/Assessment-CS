@@ -1,0 +1,19 @@
+Results for the extraLargeArray
+    append 3.3166 ms
+    insert 740.9005 ms
+Results for the tinyArray
+    append 5.5 μs
+    insert 3.9 μs
+Results for the smallArray
+    append 6.8 μs
+    insert 8.4 μs
+Results for the mediumArray
+    append 30.2 μs
+    insert 94.6 μs
+Results for the largeArray
+    append 268.8 μs
+    insert 7.0432 ms
+
+The doublerAppend function is linear and faster because it is taking the number and pushing it to the end lof the array. This means that the bigger the scale the time increases as well but linearly. Whereas the doublerInsert function is quadratic because it is taking the number and putting it at index 0 of the array which shifts every single number back an index one at a time which increases the time exponentially the bigger the scale gets making it slower.
+
+The doublerInsert is slower because it runs the calculation and inserts the number at the front of the array, but has to first create a new index at the last spot and shift all the numbers in each index over one at a time to make index 0 empty for the new nummber.
